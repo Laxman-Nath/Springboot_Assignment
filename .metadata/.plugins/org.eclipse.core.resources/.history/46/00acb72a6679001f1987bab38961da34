@@ -1,0 +1,32 @@
+package com.hospital.controllers;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.hospital.repository.AdminRepository;
+
+import ch.qos.logback.core.model.Model;
+
+@Controller
+//@RequestMapping("/admin")
+public class AdminController {
+	@Autowired
+	private AdminRepository adminRepo;
+	@GetMapping("/")
+	public String login() {
+		return "admin/login";
+	}
+	@GetMapping("/register")
+	public String getRegister() {
+		return "admin/register";
+	}
+	
+	@PostMapping("/saveAdmin")
+	public String registerAdmin(Model m) {
+		
+		return "admin/register";
+	}
+}

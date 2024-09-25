@@ -1,0 +1,10 @@
+package com.hospital.models;
+
+public class Appointment {
+	private int id;
+	private String doctor;
+	private Date date;
+	private int slots;
+	private String details;
+	private double fee;
+}

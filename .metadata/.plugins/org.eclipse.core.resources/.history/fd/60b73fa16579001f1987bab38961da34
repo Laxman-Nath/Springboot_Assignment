@@ -1,0 +1,2 @@
+spring.application.name=Hospital_System
+server.port=8085
